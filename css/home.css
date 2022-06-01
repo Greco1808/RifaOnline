@@ -57,7 +57,7 @@ h1{
 .rifa_container{
   
   display:grid;
-  grid-template-columns:auto auto auto;
+  grid-template-columns:auto auto auto auto;
   grid-gap:0;
   width:90%;
   min-height:33.5em;
