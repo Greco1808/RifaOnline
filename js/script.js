@@ -33,7 +33,16 @@ var total = 0;
 
 //funções atribuidas aos botões
 
-botaoInserir.addEventListener("click",inserirNome)
+botaoInserir.addEventListener("click",function(){
+  
+  for(i =0; i < valor.value ; i++ ){
+    
+    inserirNome()
+  }
+  nome.value = ""
+  valor.value = ""
+  nome.focus()
+})
 botaoSortear.addEventListener("click",sortear)
 botaoLimpar.addEventListener("click",limparSorteio)
 botaoSalvaValorMinimo.addEventListener("click",salvaValor)  
@@ -157,6 +166,7 @@ function inserirNome(){
  var valorInput = valor.value;
  var valorMinimoInput = valorMinimo.value;
  var nomeInputUppercase = nomeInput.toLocaleUpperCase();
+ 
   
     
   if(valorMinimo.disabled == false){
@@ -170,11 +180,11 @@ function inserirNome(){
  var valorMinimoValidacao = parseInt(document.querySelector("#valor_Minimo_Validacao").innerText);
  console.log(valorMinimoValidacao)
 
- if(valorInput < valorMinimoValidacao){
+ //if(valorInput < valorMinimoValidacao){
     
     
-    return alert("o valor mínimo deve ser maior do que " + "R$ " + valorMinimoValidacao)
-  }
+    //return alert("o valor mínimo deve ser maior do que " + "R$ " + valorMinimoValidacao)
+  //}
 
 
 //validação dos formulários
@@ -182,19 +192,19 @@ function inserirNome(){
     return alert("todos os campos devem ser preenchidos")
 }
   
-for(i = 0 ; i < rifaJogada.length ; i++){
-      if(rifaJogada[i].firstChild.innerText == nomeInputUppercase){
-      return alert("já existe uma rifa com esse nome, por favor , escolha outro nome")
-     break
-}
-}
+//for(i = 0 ; i < rifaJogada.length ; i++){
+      //if(rifaJogada[i].firstChild.innerText == nomeInputUppercase){
+      //return alert("já existe uma rifa com esse nome, por favor , escolha outro nome")
+     //break
+//}
+//}
       
 //cria o objeto de uma novo ticket da rifa
   const corpoJogador = document.createElement("div")
   const botaoRemover = document.createElement("button")
   botaoRemover.classList.add("botao_remover")
   botaoRemover.innerHTML = "remover"
-  corpoJogador.innerHTML = `<p class="texto_sorteio">${nomeInputUppercase}</p> <p class="texto_sorteio">R$ <span id="span_remover">${valorInput}</span></p>`
+  corpoJogador.innerHTML = `<p class="texto_sorteio">${nomeInputUppercase}</p> <p class="texto_sorteio">R$ <span id="span_remover">${valorMinimoValidacao}</span></p>`
   corpoJogador.classList.add("corpo_rifa")
   corpoRifa.appendChild(corpoJogador)
   corpoJogador.appendChild(botaoRemover)
@@ -204,7 +214,7 @@ for(i = 0 ; i < rifaJogada.length ; i++){
   botaoRemover.addEventListener("click", function(){
       var valorRemover = botaoRemover.previousElementSibling.firstElementChild.innerText
       total -= parseInt(valorRemover)
-      lucroPrejuizoComparavel.innerHTML = parseInt(total) -       parseInt(valorPremioSalvo.innerText);
+      lucroPrejuizoComparavel.innerHTML = parseInt(total) - parseInt(valorPremioSalvo.innerText);
       valorAcumulado.innerHTML = "Valor acumulado: R$ " + total +",00";
       progressoLucro.setAttribute("value",total)
       
@@ -219,7 +229,7 @@ for(i = 0 ; i < rifaJogada.length ; i++){
     })
   
   //Declara a variável que acumula o total de dinheiro com a rifa
-  total += parseInt(valorInput)    
+  total += valorMinimoValidacao
   
   valorAcumulado.innerHTML = "Valor acumulado: R$ " + total +",00";
   lucroPrejuizoComparavel.innerHTML = parseInt(total) - parseInt(valorPremioSalvo.innerText);
@@ -227,9 +237,7 @@ for(i = 0 ; i < rifaJogada.length ; i++){
   progressoLucro.setAttribute("max",parseInt(valorPremioSalvo.innerText))
   //progressoLucro.max(parseInt(valorPremioSalvo.innerText))
   
-  nome.value = ""
-  valor.value = ""
-  nome.focus()
+  
   
   
    
