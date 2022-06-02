@@ -129,7 +129,7 @@ button{
     border: 2px dotted black;
     border-radius: 8px;
     text-align: center;
-    background-color: #f9bc60;
+    /*background-color: #f9bc60;*/
     font-family: 'Rubik', sans-serif;
     font-size: 1em;
     font-weight: bolder;
