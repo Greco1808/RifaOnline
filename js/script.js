@@ -34,7 +34,10 @@ var total = 0;
 //funções atribuidas aos botões
 
 botaoInserir.addEventListener("click",function(){
-  
+  if(valorPremioSalvo.innerHTML == ""){
+    
+    return alert("insira um valor de prêmio")
+  }
   for(i =0; i < valor.value ; i++ ){
     
     inserirNome()
@@ -53,7 +56,8 @@ botaoSalvaPremioTitulo.addEventListener("click",salvaPremioTitulo)
 botaoExcluirPremioTitulo.addEventListener("click",excluiTitulo)
 botaoExcluirPremioDescricao.addEventListener("click",excluiDescricao)
 botaoSalvaValorPremio.addEventListener("click",salvaValorPremio)
-
+botaoEditaValorPremio.addEventListener("click",editaValorPremio)
+botaoExcluiValorPremio.addEventListener("click",excluiValorPremio)
 
 
 function salvaPremioTitulo(){
@@ -65,6 +69,8 @@ function salvaPremioTitulo(){
   
   //inserção do titulo do premio dentro do HTML
   botaoEditaPremioTitulo.disabled = false;
+  premioId.value = ""
+  
   
       
 }
@@ -76,6 +82,7 @@ function editaValorTitulo(){
  //variaveis de acesso ao DOM 
   premioId.value = premioIdSalvo.innerText;
   premioIdSalvo.innerHTML = ""
+  premioId.focus()
    
 }
 
@@ -89,6 +96,7 @@ function salvaPremioDescricao(){
   botaoEditaPremioDescricao.disabled = false;
   var descricaoPremioValue = descricaoPremio.value;
   premioDescricaoSalvo.innerHTML = descricaoPremioValue
+  descricaoPremio.value = ""
   
 }
 
@@ -104,6 +112,7 @@ function editaValorDescricao(){
   
   
   
+  
 }
 
 function excluiDescricao(){
@@ -114,7 +123,7 @@ function excluiDescricao(){
 
 
 function salvaValorPremio(){
-  
+  botaoEditaValorPremio.disabled = false
   valorPremioInputValue = parseInt(valorPremioInput.value)     
    valorPremioSalvo.innerHTML =  valorPremioInputValue
   
@@ -134,10 +143,17 @@ function comparaValor(){
 
 function editaValorPremio(){
   
+  botaoEditaValorPremio.disabled = true;
+  valorPremioInput.value = valorPremioSalvo;
+  valorPremioSalvo.innerHTML = ""
+  valorPremioInput.focus()
+  
+  
 }
 
 function excluiValorPremio(){
   
+  valorPremioSalvo.innerHTML = ""
 }
 
 function salvaValor(){
