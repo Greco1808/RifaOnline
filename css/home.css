@@ -56,19 +56,21 @@ h1{
 
 .rifa_container{
   
-  display:grid;
-  grid-template-columns:auto auto auto auto;
-  grid-gap:0;
-  width:90%;
-  min-height:33.5em;
-  border-radius:8px;
-  margin:0 1.5em;
-  margin-bottom:2.5em;
-  background-color:#abd1c6;
-  box-shadow:1px 1px 3px black;
-  border:2px solid #e16162;
-  align-items: center;
-  justify-items: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-gap: 0;
+    width: 90%;
+    min-height: 33.5em;
+    border-radius: 8px;
+    margin: 0 1.5em;
+    margin-bottom: 2.5em;
+    background-color: #abd1c6;
+    box-shadow: 1px 1px 3px black;
+    border: 2px solid #e16162;
+    align-items: center;
+    justify-items: center;
+    grid-auto-columns: 0px;
+    grid-auto-rows: 8em;
   
 }
 
@@ -118,19 +120,19 @@ button{
 
 .corpo_rifa{
   
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  width:9em;
-  height:9em;
-  border:2px dotted black;
-  border-radius:8px;
-  text-align:center;
-  background-color:#f9bc60;
-  font-family: 'Rubik', sans-serif;
-  font-size:1.1em;
-  font-weight:bolder;
+  display: flex;
+  flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 8em;
+    height: 7.5em;
+    border: 2px dotted black;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f9bc60;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1em;
+    font-weight: bolder;
   
 }
 
