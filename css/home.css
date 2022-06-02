@@ -146,7 +146,17 @@ button{
   border:2px dotted #0042b6;
   border-radius:8px;
   text-align:center;
-  background-color:#e16162;
+  /*background-color:#e16162;*/
+  animation-name:sorteio;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes sorteio{
+  
+  from{border 2px dotted #0042b6}
+  to{border 3px dotted blue}
+
 }
 
 .texto_sorteio{
