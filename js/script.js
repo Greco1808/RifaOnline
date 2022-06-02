@@ -28,6 +28,8 @@ const premioDescricaoSalvo = document.querySelector("#premio_descrito_salvo")
 const valorPremioSalvo = document.querySelector("#premio_valor_salvo")
 const lucroPrejuizoComparavel = document.querySelector("#lucro_prejuizo_comparavel")
 const progressoLucro = document.querySelector("#lucro_prejuizo_progresso")
+const paletaCores = document.querySelector("#paleta_cores")
+
 var total = 0;
 
 
@@ -181,6 +183,7 @@ function inserirNome(){
  var nomeInput = nome.value;
  var valorInput = valor.value;
  var valorMinimoInput = valorMinimo.value;
+ var paletaCoresValue = paletaCores.value
  var nomeInputUppercase = nomeInput.toLocaleUpperCase();
  
   
@@ -222,6 +225,7 @@ function inserirNome(){
   botaoRemover.innerHTML = "remover"
   corpoJogador.innerHTML = `<p class="texto_sorteio">${nomeInputUppercase}</p> <p class="texto_sorteio">R$ <span id="span_remover">${valorMinimoValidacao}</span></p>`
   corpoJogador.classList.add("corpo_rifa")
+  corpoJogador.style.background = paletaCoresValue
   corpoRifa.appendChild(corpoJogador)
   corpoJogador.appendChild(botaoRemover)
   
@@ -273,6 +277,7 @@ function sortear(){
   var sorteio = Math.floor(Math.random() * (max - min)) + min;
   var numeroSorteado = rifaJogada[sorteio]
   
+  numeroSorteado.style.background = "#e16162"
   numeroSorteado.classList.add("sorteado")
   
   botaoSortear.disabled = true;
