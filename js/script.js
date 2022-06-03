@@ -193,24 +193,15 @@ function salvaValor(){
 
 function inserirNome(){
  
+ const rifaJogada = document.querySelectorAll(".corpo_rifa")
+ const paletaCores = document.querySelector("#paleta_cores")
+  
  var nomeInput = nome.value;
  var valorInput = valor.value;
  var valorMinimoInput = valorMinimo.value;
  var nomeInputUppercase = nomeInput.toLocaleUpperCase();
-  
- const rifaJogada = document.querySelectorAll(".corpo_rifa")
- 
- 
- 
-  
-//declaração das variáveis que estão dentro dos inputs
- 
- 
-  
-    
-  
-  
-  
+ var paletaCoresValue = paletaCores.value;
+
   //converte o valor mínimo salvo dentro do HTML em um número a ser selecionado através da tag span
  var valorMinimoValidacao = parseInt(document.querySelector("#valor_Minimo_Validacao").innerText);
  console.log(valorMinimoValidacao)
@@ -239,6 +230,7 @@ function inserirNome(){
   botaoRemover.innerHTML = "remover"
   corpoJogador.innerHTML = `<p class="texto_sorteio">${nomeInputUppercase}</p> <p class="texto_sorteio">R$ <span id="span_remover">${valorMinimoValidacao}</span></p>`
   corpoJogador.classList.add("corpo_rifa")
+  corpoJogador.style.background = paletaCoresValue
   corpoRifa.appendChild(corpoJogador)
   corpoJogador.appendChild(botaoRemover)
   
