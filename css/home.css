@@ -1,6 +1,8 @@
 body{
   
-  background-color:#004643;
+ background-color: #98afdf;
+
+
 }
 
 p{
@@ -43,12 +45,12 @@ h1{
   padding:1em;
   height:30%;
   min-width:20%;
-  background: #abd1c6;
+  background: #f7f3f6;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border:2px solid #e16162;
+  /*border:2px solid #e16162;*/
   box-shadow:1px 1px 3px black;
   
 }
@@ -63,9 +65,9 @@ h1{
     border-radius: 8px;
     margin: 0 1.5em;
     margin-bottom: 2.5em;
-    background-color: #abd1c6;
+    background-color: #f7f3f6;
     box-shadow: 1px 1px 3px black;
-    border: 2px solid #e16162;
+    /*border: 2px solid #e16162;*/
     align-items: center;
     justify-items: center;
     grid-auto-columns: 0px;
@@ -80,10 +82,10 @@ h1{
   flex-direction:column;
   padding:1em;
   height:30%;
-  background: #abd1c6;
+  background: #f7f3f6;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border:2px solid #e16162;
+  /*border:2px solid #e16162;*/
   box-shadow:1px 1px 3px black;
 }
 
@@ -106,7 +108,7 @@ input, button {
 button{
   
   padding:0.8em;
-  background-color:#f9bc60;
+  background-color:#5998d1;
   border:none;
   border-radius:8px;
   font-size:0.8em;
