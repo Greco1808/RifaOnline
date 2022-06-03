@@ -81,7 +81,7 @@ h1{
   flex-direction:column;
   padding:1em;
   min-height:46.5em;
-  background: E4FFE1;
+  background-color: E4FFE1;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   /*border:2px solid #e16162;*/
