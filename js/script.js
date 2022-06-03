@@ -145,7 +145,8 @@ function excluiDescricao(){
 function salvaValorPremio(){
   botaoEditaValorPremio.disabled = false
   valorPremioInputValue = parseInt(valorPremioInput.value)     
-   valorPremioSalvo.innerHTML =  valorPremioInputValue
+  valorPremioSalvo.innerHTML =  valorPremioInputValue
+  valorPremioInput.value = ""
   
    
   
@@ -184,10 +185,7 @@ function salvaValor(){
   botaoSalvaValorMinimo.disabled = true;
   valorMinimo.value = ""
   valorMinimo.disabled = true;
-  
-  
-  
-  
+    
 }
 
 
@@ -206,22 +204,7 @@ function inserirNome(){
  var valorMinimoValidacao = parseInt(document.querySelector("#valor_Minimo_Validacao").innerText);
  console.log(valorMinimoValidacao)
 
- //if(valorInput < valorMinimoValidacao){
-    
-    
-    //return alert("o valor mínimo deve ser maior do que " + "R$ " + valorMinimoValidacao)
-  //}
-
-
-//validação dos formulários
  
-  
-//for(i = 0 ; i < rifaJogada.length ; i++){
-      //if(rifaJogada[i].firstChild.innerText == nomeInputUppercase){
-      //return alert("já existe uma rifa com esse nome, por favor , escolha outro nome")
-     //break
-//}
-//}
       
 //cria o objeto de uma novo ticket da rifa
   const corpoJogador = document.createElement("div")
@@ -312,6 +295,21 @@ function limparSorteio(){
 
 
  
+//if(valorInput < valorMinimoValidacao){
+    
+    
+    //return alert("o valor mínimo deve ser maior do que " + "R$ " + valorMinimoValidacao)
+  //}
 
+
+//validação dos formulários
+ 
+  
+//for(i = 0 ; i < rifaJogada.length ; i++){
+      //if(rifaJogada[i].firstChild.innerText == nomeInputUppercase){
+      //return alert("já existe uma rifa com esse nome, por favor , escolha outro nome")
+     //break
+//}
+//}
 
 
