@@ -146,8 +146,14 @@ button{
   border:2px dotted #0042b6;
   border-radius:8px;
   text-align:center;
-  background-color:#e16162;
-  
+  animation-name: example;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  from {border:4px solid red;}
+  to {border:4px solid blue}
 }
 
 
