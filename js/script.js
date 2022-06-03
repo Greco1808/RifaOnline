@@ -28,18 +28,36 @@ const premioDescricaoSalvo = document.querySelector("#premio_descrito_salvo")
 const valorPremioSalvo = document.querySelector("#premio_valor_salvo")
 const lucroPrejuizoComparavel = document.querySelector("#lucro_prejuizo_comparavel")
 const progressoLucro = document.querySelector("#lucro_prejuizo_progresso")
-const paletaCores = document.querySelector("#paleta_cores")
-
 var total = 0;
 
 
 //funções atribuidas aos botões
 
 botaoInserir.addEventListener("click",function(){
+  
+ var nomeInput = nome.value;
+ var valorInput = valor.value;
+ var valorMinimoInput = valorMinimo.value;
+ var nomeInputUppercase = nomeInput.toLocaleUpperCase();
+  
+  if(nomeInputUppercase == "" || valorInput == ""){
+    return alert("todos os campos devem ser preenchidos")
+}
+  
   if(valorPremioSalvo.innerHTML == ""){
     
     return alert("insira um valor de prêmio")
   }
+  
+  if(valorMinimo.disabled == false){
+    
+    return alert("Insira um valor mínimo no campo valor mínimo")
+    
+    }
+  
+   
+  
+  
   for(i =0; i < valor.value ; i++ ){
     
     inserirNome()
@@ -175,24 +193,22 @@ function salvaValor(){
 
 function inserirNome(){
  
-  
- const rifaJogada = document.querySelectorAll(".corpo_rifa")
- 
-  
-//declaração das variáveis que estão dentro dos inputs
  var nomeInput = nome.value;
  var valorInput = valor.value;
  var valorMinimoInput = valorMinimo.value;
- var paletaCoresValue = paletaCores.value
  var nomeInputUppercase = nomeInput.toLocaleUpperCase();
+  
+ const rifaJogada = document.querySelectorAll(".corpo_rifa")
+ 
+ 
+ 
+  
+//declaração das variáveis que estão dentro dos inputs
+ 
  
   
     
-  if(valorMinimo.disabled == false){
-    
-    return alert("Insira um valor mínimo no campo valor mínimo")
-    
-    }
+  
   
   
   //converte o valor mínimo salvo dentro do HTML em um número a ser selecionado através da tag span
@@ -207,9 +223,7 @@ function inserirNome(){
 
 
 //validação dos formulários
-  if(nomeInputUppercase == "" || valorInput == ""){
-    return alert("todos os campos devem ser preenchidos")
-}
+ 
   
 //for(i = 0 ; i < rifaJogada.length ; i++){
       //if(rifaJogada[i].firstChild.innerText == nomeInputUppercase){
@@ -225,7 +239,6 @@ function inserirNome(){
   botaoRemover.innerHTML = "remover"
   corpoJogador.innerHTML = `<p class="texto_sorteio">${nomeInputUppercase}</p> <p class="texto_sorteio">R$ <span id="span_remover">${valorMinimoValidacao}</span></p>`
   corpoJogador.classList.add("corpo_rifa")
-  corpoJogador.style.background = paletaCoresValue
   corpoRifa.appendChild(corpoJogador)
   corpoJogador.appendChild(botaoRemover)
   
@@ -277,7 +290,6 @@ function sortear(){
   var sorteio = Math.floor(Math.random() * (max - min)) + min;
   var numeroSorteado = rifaJogada[sorteio]
   
-  numeroSorteado.style.background = "#e16162"
   numeroSorteado.classList.add("sorteado")
   
   botaoSortear.disabled = true;
