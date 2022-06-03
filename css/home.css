@@ -1,6 +1,6 @@
 body{
   
- background-color: #98afdf;
+ background-color: 6A8D73;
 
 
 }
@@ -45,7 +45,7 @@ h1{
   padding:1em;
   height:30%;
   min-width:20%;
-  background: #f7f3f6;
+  background-color: E4FFE1;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
@@ -65,7 +65,7 @@ h1{
     border-radius: 8px;
     margin: 0 1.5em;
     margin-bottom: 2.5em;
-    background-color: #f7f3f6;
+    background-color: E4FFE1;
     box-shadow: 1px 1px 3px black;
     /*border: 2px solid #e16162;*/
     align-items: center;
@@ -108,7 +108,7 @@ input, button {
 button{
   
   padding:0.8em;
-  background-color:#5998d1;
+  background-color:F0A868;
   border:none;
   border-radius:8px;
   font-size:0.8em;
