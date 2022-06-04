@@ -8,14 +8,19 @@ body{
 p{
   
   font-size:1.2em;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 span{
   
   font-size:1.2em;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Roboto', sans-serif;
   
+}
+
+h2{
+  
+  font-family: 'Roboto', sans-serif;
 }
 
 textarea{
