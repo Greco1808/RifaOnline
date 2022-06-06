@@ -224,6 +224,19 @@ button{
   
 }
 
+#premio_valor_salvo{
+  
+  font-size:2.7em;
+  font-weight:bolder;
+  
+}
+
+#lucro_prejuizo_comparavel{
+  
+  font-size:1em;
+  font-weight:bolder;
+}
+
 
 #progress_container_estilo{
  
