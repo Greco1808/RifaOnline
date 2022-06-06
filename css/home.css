@@ -169,6 +169,8 @@ button{
   margin:0.3em;
 }
 
+
+
 .botao_remover{
   
   width:70%;
@@ -198,11 +200,16 @@ button{
   color:white;
 }
 
+#premio_titulo_salvo{
+  
+  font-weight:bolder;
+  
+}
 
 
 #premio_descrito_salvo{
   
-  font-size:1.4em;
+  font-size:1.2em;
   
 }
 
