@@ -111,6 +111,11 @@ input, button {
   font-family:'Rubik', sans-serif;
 }
 
+#paleta_cores{
+  
+  width:72%;
+}
+
 /*Estilização dos botões do projeto*/
 
 button{
