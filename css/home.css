@@ -26,6 +26,9 @@ h2{
 textarea{
   
   resize:none;
+  background-color:C2CFB2;
+  border-radius:5px;
+  border:none;
 }
 
 /*containeres das sessões iniciais do projeto*/
