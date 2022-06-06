@@ -5,23 +5,19 @@ body{
 
 }
 
-p{
+h1,h2,p,span{
   
-  font-size:1.2em;
   font-family: inter;
 }
 
-span{
+p,span{
   
   font-size:1.2em;
-  font-family: inter;
   
 }
 
-h2{
-  
-  font-family: inter;
-}
+
+
 
 textarea{
   
@@ -187,11 +183,7 @@ button{
   
 }
 
-h1, h2{
-  
-  font-family: 'Rubik', sans-serif;
-  
-}
+
 
 #sorteadoDisabled{
   
