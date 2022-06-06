@@ -151,9 +151,8 @@ button{
 }
 
 .corpo_rifa:hover{
-  transition:0.2s width, height;
-  width:8.2em;
-  height:7.7em;
+  
+  border:2px dotted red;
 }
 
 .sorteado{
