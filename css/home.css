@@ -220,6 +220,15 @@ button{
 }
 
 
+#progress_container_estilo{
+ 
+  border:none;
+  border-radius:5px;
+  background-color:CBA135;
+  box-shadow:1px 1px 3px black;
+  
+}
+
 progress{
   
   width:90%;
