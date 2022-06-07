@@ -166,15 +166,12 @@ button{
   border-radius:8px;
   text-align:center;
   animation-name: example;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-iteration-count: infinite;
 }
 
 @keyframes example {
   0%   {background-color: E5FCFF;}
-  25%  {background-color: ABDAFC;}
-  50%  {background-color: ACACDE;}
-  75%  {background-color: C490D1;}
   100% {background-color: B8336A;}
 }
 
