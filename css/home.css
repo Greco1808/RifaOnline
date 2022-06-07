@@ -171,8 +171,11 @@ button{
 }
 
 @keyframes example {
-  from {border:4px solid red;}
-  to {border:4px solid blue}
+  0%   {background-color: E5FCFF;}
+  25%  {background-color: ABDAFC;}
+  50%  {background-color: ACACDE;}
+  75%  {background-color: C490D1;}
+  100% {background-color: B8336A;}
 }
 
 .texto_sorteio{
