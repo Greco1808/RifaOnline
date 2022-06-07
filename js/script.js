@@ -1,7 +1,10 @@
 //variaveis de acesso global
 
+//variáveis de acesso aos inputs do sistema
 const nome = document.querySelector("#selecione_nome")
 const valor = document.querySelector("#valor")
+const valorPremioInput = document.querySelector("#valor_premio")
+const valorMinimo = document.querySelector("#valor_minimo")
 //variáveis de acesso aos botões da plataforma
 const botaoInserir = document.querySelector("#inserir")
 const botaoSortear = document.querySelector("#sortear")
@@ -16,10 +19,8 @@ const botaoExcluirPremioDescricao = document.querySelector("#exclui_premio_descr
 const botaoSalvaValorPremio = document.querySelector("#salva_premio_valor")
 const botaoEditaValorPremio = document.querySelector("#edita_premio_valor")
 const botaoExcluiValorPremio = document.querySelector("#exclui_premio_valor")
-const valorPremioInput = document.querySelector("#valor_premio")
 const corpoRifa = document.querySelector(".rifa_container")
 const valorAcumulado = document.querySelector("#valor_acumulado")
-const valorMinimo = document.querySelector("#valor_minimo")
 const valorMinimoSalvo = document.querySelector("#valor_minimo_salvo")
 const premioId = document.querySelector("#premio_id")
 const descricaoPremio = document.querySelector("#descricao_premio")
