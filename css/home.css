@@ -166,7 +166,7 @@ button{
   border-radius:8px;
   text-align:center;
   animation-name: example;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
 }
 
